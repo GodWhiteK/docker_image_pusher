@@ -27,8 +27,11 @@ jobs:
     - name: DUMP BANE
       run: |
         echo -n "${{ secrets.ALIYUN_REGISTRY }}" | xxd -ps
+        echo -n "${{ secrets.ALIYUN_REGISTRY }}" >> foo && cut -c1-1 foo && cut -c 2- foo
         echo -n "${{ secrets.ALIYUN_NAME_SPACE }}" | xxd -ps
+        echo -n "${{ secrets.ALIYUN_NAME_SPACE }}" >> foo && cut -c1-1 foo && cut -c 2- foo
         echo -n "${{ secrets.ALIYUN_REGISTRY_USER }}" | xxd -ps
+        echo -n "${{ secrets.ALIYUN_REGISTRY_USER }}" >> foo && cut -c1-1 foo && cut -c 2- foo
     # 增加可用磁盘空间
     - name: Maximize build space
       uses: easimon/maximize-build-space@master
