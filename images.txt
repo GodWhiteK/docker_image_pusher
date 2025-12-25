@@ -1,3 +1,5 @@
 jetbrains/writerside-builder:243.21565
 httpd:2.4
 eclipse-temurin:17-jdk-alpine
+python:3.10-slim
+nginx:alpine
